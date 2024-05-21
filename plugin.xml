@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-video-trim" version="2.2.0" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugin-video-trim</name>
+    <description>Cordova cordova-plugin-video-trim Plugin</description>
+    <author>350561378@qq.com</author>
+    <license>Apache License Version 2.0</license>
+    <keywords>cordova,video,video trimmer,cordova-plugin-video-trim</keywords>
+
+    <engines>
+        <engine name="cordova-android" version=">=8.0.0" />
+    </engines>
+
+    <dependency id="cordova-plugin-file" version="6.0.0"/>
+    <dependency id="cordova-plugin-camera" version="4.1.0" />
+    <dependency id="cordova-plugin-streaming-media" />
+    <dependency id="cordova-plugin-media-capture" version="3.0.3" />
+    <dependency id="cordova-plugin-android-permissions" />
+    <dependency id="cordova-plugin-device" />
+
+    <js-module name="CordovaTrimmer" src="www/cordova-plugin-video-trim.js">
+        <clobbers target="videoTrim" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="CordovaTrimmer">
+                <param name="android-package" value="com.iknow.android.TrimmerCordovaPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <activity android:name="com.iknow.android.features.select.VideoSelectActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" />
+            <activity android:name="com.iknow.android.features.trim.VideoTrimmerActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar"/>
+        </config-file>
+
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+
+
+        <source-file src="src/android/com/iknow/android/TrimmerCordovaPlugin.java" target-dir="src/com/iknow/android" />
+        <source-file src="src/android/com/iknow/android/features/select/VideoSelectActivity.java" target-dir="src/com/iknow/android/features/select" />
+        <source-file src="src/android/com/iknow/android/features/select/VideoSelectAdapter.java" target-dir="src/com/iknow/android/features/select" />
+        <source-file src="src/android/com/iknow/android/features/trim/VideoTrimmerActivity.java" target-dir="src/com/iknow/android/features/trim" />
+        <source-file src="src/android/com/iknow/android/features/trim/VideoTrimmerAdapter.java" target-dir="src/com/iknow/android/features/trim" />
+        <source-file src="src/android/com/iknow/android/interfaces/CompressVideoListener.java" target-dir="src/com/iknow/android/interfaces" />
+        <source-file src="src/android/com/iknow/android/interfaces/IVideoTrimmerView.java" target-dir="src/com/iknow/android/interfaces" />
+        <source-file src="src/android/com/iknow/android/interfaces/TrimVideoListener.java" target-dir="src/com/iknow/android/interfaces" />
+        <source-file src="src/android/com/iknow/android/interfaces/TrimVideoImgListener.java" target-dir="src/com/iknow/android/interfaces" />
+
+        <source-file src="src/android/com/iknow/android/models/VideoInfo.java" target-dir="src/com/iknow/android/models" />
+        <source-file src="src/android/com/iknow/android/utils/CompressVideoUtil.java" target-dir="src/com/iknow/android/utils" />
+        <source-file src="src/android/com/iknow/android/utils/TrimVideoUtil.java" target-dir="src/com/iknow/android/utils" />
+        <source-file src="src/android/com/iknow/android/widget/RangeSeekBarView.java" target-dir="src/com/iknow/android/widget" />
+        <source-file src="src/android/com/iknow/android/widget/SpacesItemDecoration.java" target-dir="src/com/iknow/android/widget" />
+        <source-file src="src/android/com/iknow/android/widget/SpacesItemDecoration2.java" target-dir="src/com/iknow/android/widget" />
+        <source-file src="src/android/com/iknow/android/widget/VideoTrimmerView.java" target-dir="src/com/iknow/android/widget" />
+        <source-file src="src/android/com/iknow/android/ZApplication.java" target-dir="src/com/iknow/android" />
+        <source-file src="src/android/com/iknow/android/JarActivity.java" target-dir="src/com/iknow/android" />
+        <source-file src="src/android/com/iknow/android/MResource.java" target-dir="src/com/iknow/android" />
+
+        <source-file src="src/android/res/drawable/icon_back_drawable.xml" target-dir="res/drawable" />
+
+        <source-file src="src/android/res/drawable-hdpi/icon_back_n.png" target-dir="res/drawable-hdpi" />
+        <source-file src="src/android/res/drawable-hdpi/icon_back_p.png" target-dir="res/drawable-hdpi" />
+        <source-file src="src/android/res/drawable-hdpi/icon_seek_bar.png" target-dir="res/drawable-hdpi" />
+        <source-file src="src/android/res/drawable-hdpi/icon_video_pause_black.png" target-dir="res/drawable-hdpi" />
+        <source-file src="src/android/res/drawable-hdpi/icon_video_play_black.png" target-dir="res/drawable-hdpi" />
+        <source-file src="src/android/res/drawable-hdpi/icon_video_selected.png" target-dir="res/drawable-hdpi" />
+        <source-file src="src/android/res/drawable-hdpi/icon_video_unselected.png" target-dir="res/drawable-hdpi" />
+        <source-file src="src/android/res/drawable-hdpi/icon_video.png" target-dir="res/drawable-hdpi" />
+
+        <source-file src="src/android/res/drawable-xhdpi/icon_recoder.png" target-dir="res/drawable-xhdpi" />
+        <source-file src="src/android/res/drawable-xhdpi/icon_video_thumb_handle.png" target-dir="res/drawable-xhdpi" />
+        <source-file src="src/android/res/drawable-xhdpi/upload_overlay_black.9.png" target-dir="res/drawable-xhdpi" />
+        <source-file src="src/android/res/drawable-xhdpi/upload_overlay_trans.9.png" target-dir="res/drawable-xhdpi" />
+
+        <source-file src="src/android/res/layout/activity_trimmer_layout.xml" target-dir="res/layout" />
+        <source-file src="src/android/res/layout/video_select_gridview_item.xml" target-dir="res/layout" />
+        <source-file src="src/android/res/layout/video_select_layout.xml" target-dir="res/layout" />
+        <source-file src="src/android/res/layout/video_thumb_item_layout.xml" target-dir="res/layout" />
+        <source-file src="src/android/res/layout/video_trimmer_view.xml" target-dir="res/layout" />
+
+        <source-file src="src/android/res/values/trimmer_attrs.xml" target-dir="res/values" />
+        <source-file src="src/android/res/values/trimmer_colors.xml" target-dir="res/values" />
+        <source-file src="src/android/res/values/trimmer_dimens.xml" target-dir="res/values" />
+        <source-file src="src/android/res/values/trimmer_strings.xml" target-dir="res/values" />
+        <source-file src="src/android/res/values/trimmer_styles.xml" target-dir="res/values" />
+
+        <framework src="src/android/compile.gradle" custom="true" type="gradleReference" />
+        <framework src="androidx.recyclerview:recyclerview:1.2.1" />
+	 <framework src="androidx.core:core:1.10.1" />
+        <framework src="androidx.appcompat:appcompat:1.4.1" />
+        <framework src="androidx.annotation:annotation:1.4.0"/>
+        <resource-file src="aars/android-utils-sdk-1.1.2.aar" target="../../aars/android-utils-sdk-1.1.2.aar" />
+        <resource-file src="aars/FFmpegAndroid-0.3.2.aar" target="../../aars/FFmpegAndroid-0.3.2.aar" />
+        <resource-file src="aars/recyclerview-v7-23.1.1.aar" target="../../aars/recyclerview-v7-23.1.1.aar" />
+        <source-file src="src/android/lib/universal-image-loader-1.9.5.jar" target-dir="libs"/>
+
+        <!-- <hook type="before_prepare" src="scripts/hook.js" /> -->
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+
+        <framework src="AssetsLibrary.framework"/>
+        <framework src="AVFoundation.framework"/>
+        <framework src="MediaPlayer.framework"/>
+        <framework src="CoreVideo.framework"/>
+
+
+
+        <hook type="before_prepare" src="hook/ios/after_build.js" />
+    </platform>
+</plugin>

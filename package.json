@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-video-trim",
+  "version": "2.2.0",
+  "description": "视频剪辑功能的Cordova插件",
+  "cordova": {
+    "id": "cordova-plugin-video-trim"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waitaction/cordova-plugin-video-trim.git"
+  },
+  "keywords": [
+    "cordova-plugin-video-trim",
+    "cordova",
+    "cordova-android",
+    "ecosystem:cordova",
+    "video",
+    "video trimmer"
+  ],
+  "author": "waitaction",
+  "license": "Apache License Version 2.0",
+  "peerDependencies": {
+    "cordova-plugin-device": ">=1.0.0"
+  }
+}
