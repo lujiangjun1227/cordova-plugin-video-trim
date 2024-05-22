@@ -5,10 +5,10 @@
     }
 }
 dependencies {
-    api files('libs/universal-image-loader-1.9.5.jar')
-    api(name: "recyclerview-1.2.0", ext: "aar")
-    api(name: "android-utils-sdk-1.1.2", ext: "aar")
-    api(name: "FFmpegAndroid-0.3.2", ext: "aar")
+    implementation files('libs/universal-image-loader-1.9.5.jar')
+    implementation(name: "recyclerview-1.2.0", ext: "aar")
+    implementation(name: "android-utils-sdk-1.1.2", ext: "aar")
+    implementation(name: "FFmpegAndroid-0.3.2", ext: "aar")
 }
 android {
     buildTypes {
