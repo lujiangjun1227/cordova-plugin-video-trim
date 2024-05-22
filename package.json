@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/waitaction/cordova-plugin-video-trim.git"
+    "url": "git+https://github.com/lujiangjun1227/cordova-plugin-video-trim.git"
   },
   "keywords": [
     "cordova-plugin-video-trim",
