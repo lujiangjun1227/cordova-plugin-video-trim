@@ -6,7 +6,7 @@
 }
 dependencies {
     api files('libs/universal-image-loader-1.9.5.jar')
-    implementation files('libs/recyclerview-1.2.1.aar')
+    api(name: "androidx.recyclerview:recyclerview:1.2.0", ext: "aar")
     api(name: "android-utils-sdk-1.1.2", ext: "aar")
     api(name: "FFmpegAndroid-0.3.2", ext: "aar")
 }
