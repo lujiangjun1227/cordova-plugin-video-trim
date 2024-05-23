@@ -33,12 +33,6 @@
             <activity android:name="com.iknow.android.features.trim.VideoTrimmerActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar"/>
         </config-file>
 
-        <config-file parent="/manifest" target="AndroidManifest.xml">
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-        </config-file>
-
-
         <source-file src="src/android/com/iknow/android/TrimmerCordovaPlugin.java" target-dir="src/com/iknow/android" />
         <source-file src="src/android/com/iknow/android/features/select/VideoSelectActivity.java" target-dir="src/com/iknow/android/features/select" />
         <source-file src="src/android/com/iknow/android/features/select/VideoSelectAdapter.java" target-dir="src/com/iknow/android/features/select" />
