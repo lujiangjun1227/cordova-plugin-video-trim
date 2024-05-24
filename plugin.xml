@@ -31,7 +31,7 @@
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
             <activity android:name="com.iknow.android.features.select.VideoSelectActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" />
             <activity android:name="com.iknow.android.features.trim.VideoTrimmerActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar"/>
-        </config-file》
+        </config-file>
         
         <source-file src="src/android/com/iknow/android/TrimmerCordovaPlugin.java" target-dir="src/com/iknow/android" />
         <source-file src="src/android/com/iknow/android/features/select/VideoSelectActivity.java" target-dir="src/com/iknow/android/features/select" />
