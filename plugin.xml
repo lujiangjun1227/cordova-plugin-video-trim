@@ -97,7 +97,7 @@
         <resource-file src="aars/recyclerview-1.2.0.aar" target="../../aars/recyclerview-1.2.0.aar" />
         <source-file src="src/android/lib/universal-image-loader-1.9.5.jar" target-dir="libs"/>
 
-        <hook type="before_plugin_install" src="hook/android/before_plugin_install.js" />
+        <hook type="after_plugin_add" src="hook/android/after_plugin_add.js" />
         <!-- <hook type="before_prepare" src="scripts/hook.js" /> -->
     </platform>
 
