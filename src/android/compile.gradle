@@ -9,6 +9,7 @@ dependencies {
     implementation(name: "recyclerview-1.2.0", ext: "aar")
     implementation(name: "android-utils-sdk-1.1.2", ext: "aar")
     implementation(name: "FFmpegAndroid-0.3.2", ext: "aar")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.10"
 }
 android {
     buildTypes {
@@ -20,11 +21,5 @@ android {
     packagingOptions {
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/LICENSE'
-    }
-}
-
-configurations.all {
-    resolutionStrategy {
-        force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.10'
     }
 }
