@@ -27,6 +27,8 @@ fs.readFile(manifestPath, 'utf8', (err, data) => {
             });
         }
 
+        console.log(Array.from(permissions).join(' '));
+
         // 重新构建去重后的uses-permission元素
         result.manifest['uses-permission'] = Array.from(permissions).map((name) => ({
             '$': { 'android:name': name }
