@@ -3,7 +3,7 @@ const path = require('path');
 const xml2js = require('xml2js');
 
 // AndroidManifest.xml 文件的路径
-const manifestPath = path.join(__dirname, '..', '..', 'platforms', 'android', 'app', 'src', 'main', 'AndroidManifest.xml');
+const manifestPath = path.join('source', 'platforms', 'android', 'app', 'src', 'main', 'AndroidManifest.xml');
 
 // 读取AndroidManifest.xml文件
 fs.readFile(manifestPath, 'utf8', (err, data) => {
