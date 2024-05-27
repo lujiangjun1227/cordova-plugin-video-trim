@@ -34,6 +34,8 @@ fs.readFile(manifestPath, 'utf8', (err, data) => {
             '$': { 'android:name': name }
         }));
 
+        console.log(result);
+
         // 将修改后的XML转换回字符串
         const builder = new xml2js.Builder();
         const updatedXml = builder.buildObject(result);
