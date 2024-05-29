@@ -1,9 +1,12 @@
- repositories{
+repositories{
     jcenter()
     flatDir{
         dirs 'aars'
     }
 }
+
+ext.kotlin_version = '1.9.21'
+
 dependencies {
     implementation files('libs/universal-image-loader-1.9.5.jar')
     implementation(name: "recyclerview-1.2.0", ext: "aar")
