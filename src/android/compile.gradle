@@ -11,6 +11,7 @@ dependencies {
     implementation(name: "android-utils-sdk-1.1.2", ext: "aar")
     implementation(name: "FFmpegAndroid-0.3.2", ext: "aar")
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.21"
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
 }
 
 android {
