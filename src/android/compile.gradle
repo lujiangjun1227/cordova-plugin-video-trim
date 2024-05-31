@@ -10,6 +10,7 @@ dependencies {
     implementation(name: "recyclerview-1.2.0", ext: "aar")
     implementation(name: "android-utils-sdk-1.1.2", ext: "aar")
     implementation(name: "FFmpegAndroid-0.3.2", ext: "aar")
+    implementation(name: "ffmpeg-kit-full-6.0.LTS", ext: "aar")
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.21"
 }
 
