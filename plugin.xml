@@ -89,6 +89,7 @@
         <framework src="androidx.annotation:annotation:1.4.0"/>
         <resource-file src="aars/android-utils-sdk-1.1.2.aar" target="../../aars/android-utils-sdk-1.1.2.aar" />
         <resource-file src="aars/FFmpegAndroid-0.3.2.aar" target="../../aars/FFmpegAndroid-0.3.2.aar" />
+        <resource-file src="aars/ffmpeg-kit-full-6.0.LTS.aar" target="../../aars/ffmpeg-kit-full-6.0.LTS.aar" />
         <resource-file src="aars/recyclerview-1.2.0.aar" target="../../aars/recyclerview-1.2.0.aar" />
         <source-file src="src/android/lib/universal-image-loader-1.9.5.jar" target-dir="libs"/>
 
